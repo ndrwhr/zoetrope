@@ -46,5 +46,5 @@ body, body * {
     background: black;
 
     /* HACK getting the :after positioned outside the wheel...*/
-    -webkit-transform: translateZ(0.1px);
+    -webkit-transform: translateZ(1px);
 }
