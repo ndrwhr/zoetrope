@@ -28,12 +28,23 @@ body, body * {
     to   { -webkit-transform: rotateY(-360deg); }
 }
 
-.frames > div {
+.frames > div, .frames > div:after {
     position: absolute;
     height: 120px;
     width: 90px;
-    background-color: rgba(0, 0, 0, 0.4);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.frames > div {
+    background-color: blue;
     -webkit-backface-visibility: visible;
+}
+
+.frames > div:after {
+    content: "";
+    background: black;
+
+    /* HACK getting the :after positioned outside the wheel...*/
+    -webkit-transform: translateZ(0.1px);
 }
