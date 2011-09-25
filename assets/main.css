@@ -17,9 +17,9 @@ body, body * {
 }
 
 @-webkit-keyframes wobble {
-    0% { -webkit-transform: rotateX(-5deg); }
-    50% { -webkit-transform: rotateX(5deg); }
-    100% { -webkit-transform: rotateX(-5deg); }
+    0% { -webkit-transform: rotateX(-10deg); }
+    50% { -webkit-transform: rotateX(-15deg); }
+    100% { -webkit-transform: rotateX(-10deg); }
 }
 
 .frames {
@@ -35,23 +35,34 @@ body, body * {
     to   { -webkit-transform: rotateY(-360deg); }
 }
 
-.frames > div, .frames > div:after {
+.frames > div, .frames > div:after, .frames > div:before {
     position: absolute;
     height: 100px;
-    width: 90px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    width: 100px;
 }
 
 .frames > div {
-    background-color: blue;
+    background-color: white;
     -webkit-backface-visibility: visible;
 }
 
-.frames > div:after {
+.frames > div:before {
     content: "";
     background: black;
-
+    width: 102px;
     /* HACK getting the :after positioned outside the wheel...*/
+    -webkit-transform: translateZ(1px);
+}
+
+.frames > div:after {
+    top: -118px;
+    width: 102px;
+    height: 120px;
+    content: "";
+    border-left: 45px solid black;
+    border-right: 45px solid black;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+    -webkit-box-sizing: border-box;
     -webkit-transform: translateZ(1px);
 }
