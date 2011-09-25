@@ -7,61 +7,43 @@
 
     <title>Zoetrope</title>
 
+    <script type="text/javascript" src="lib/DAT.GUI.min.js"></script>
+
     <link rel="stylesheet" href="assets/reset.css" type="text/css">
     <link rel="stylesheet" href="assets/main.css" type="text/css">
     <link rel="stylesheet" href="assets/frames.css" type="text/css">
 <body>
-    <div id="container">
-        <div class="frames">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+    <div class="wrapper">
+        <div id="container">
+            <div class="frames">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </div>
 
-    <script type="text/javascript">
-        var containter = document.getElementById('container'),
-            frames = document.querySelector('.frames'),
-            animationSpeed = 2000,
-            angle = -10;
-
-        document.addEventListener('keydown', function(event){
-            var keyCode = event.keyCode;
-
-            if (keyCode != 38 && keyCode != 40) return;
-            else event.preventDefault();
-
-            switch(keyCode){
-                case 38: // up
-                    angle++;
-                    break;
-                case 40: // down
-                    angle--;
-                    break;
-            }
-            container.style.webkitTransform = 'rotateX(' + angle + 'deg)';
-        });
-    </script>
+    <script type="text/javascript" src="src/controls.js"></script>
 </body>
 </html>
