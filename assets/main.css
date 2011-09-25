@@ -12,14 +12,8 @@ body, body * {
     height: 100px;
     width: 100px;
     margin: 0 auto;
-    -webkit-perspective: 1000;
-    -webkit-animation: wobble 5s infinite ease-in-out;
-}
-
-@-webkit-keyframes wobble {
-    0% { -webkit-transform: rotateX(-14deg); }
-    50% { -webkit-transform: rotateX(-10deg); }
-    100% { -webkit-transform: rotateX(-14deg); }
+    -webkit-perspective: 900;
+    -webkit-transform: rotateX(-10deg);
 }
 
 .frames {
@@ -27,7 +21,7 @@ body, body * {
     height: 100px;
     width: 100px;
     margin: 0 auto;
-    -webkit-animation: spin 5s infinite linear;
+    -webkit-animation: spin 2000ms infinite linear;
 }
 
 @-webkit-keyframes spin {
@@ -43,6 +37,7 @@ body, body * {
 
 .frames > div {
     background-color: white;
+    background-image: url("muybridge.jpg");
     -webkit-backface-visibility: visible;
 }
 
@@ -55,14 +50,14 @@ body, body * {
 }
 
 .frames > div:after {
-    top: -118px;
+    top: -98px;
     width: 102px;
-    height: 120px;
+    height: 100px;
     content: "";
-    border-left: 40px solid black;
-    border-right: 40px solid black;
-    border-top: 10px solid black;
-    border-bottom: 10px solid black;
+    border-left: 35px solid black;
+    border-right: 35px solid black;
+    border-top: 15px solid black;
+    border-bottom: 15px solid black;
     -webkit-box-sizing: border-box;
     -webkit-transform: translateZ(1px);
 }
