@@ -17,9 +17,9 @@ body, body * {
 }
 
 @-webkit-keyframes wobble {
-    0% { -webkit-transform: rotateX(-10deg); }
-    50% { -webkit-transform: rotateX(10deg); }
-    100% { -webkit-transform: rotateX(-10deg); }
+    0% { -webkit-transform: rotateX(-5deg); }
+    50% { -webkit-transform: rotateX(5deg); }
+    100% { -webkit-transform: rotateX(-5deg); }
 }
 
 .frames {
@@ -37,7 +37,7 @@ body, body * {
 
 .frames > div, .frames > div:after {
     position: absolute;
-    height: 120px;
+    height: 100px;
     width: 90px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;

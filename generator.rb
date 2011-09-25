@@ -8,7 +8,7 @@ angleStep = 360 / frames
 (0...frames).each do |i|
 	output.puts <<-css
 .frames > div:nth-child(#{ i + 1 }) {
-	-webkit-transform: rotateY(#{ angleStep * i }deg) translateZ(380px);
+	-webkit-transform: rotateY(#{ angleStep * i }deg) translateZ(355px);
 }
 	css
 end
