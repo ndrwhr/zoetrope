@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: #151515;
 }
 
 .wrapper, .wrapper * {
@@ -12,7 +12,7 @@ body {
     width: 100px;
     margin: 0 auto;
     -webkit-perspective: 900;
-    -webkit-transform: rotateX(-10deg);
+    -webkit-transform: rotateX(-3deg);
 }
 
 .frames {
@@ -20,7 +20,7 @@ body {
     height: 100px;
     width: 100px;
     margin: 0 auto;
-    -webkit-animation: spin 2000ms infinite linear;
+    -webkit-animation: spin 1200ms infinite linear;
 }
 
 @-webkit-keyframes spin {

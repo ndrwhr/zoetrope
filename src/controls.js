@@ -3,8 +3,8 @@ var Zoetrope = function(){
         frames = document.querySelector('.frames');
 
     // Properties with getters and setters:
-    var period = 2,
-        angle = -10;
+    var period = 1.200,
+        angle = -3;
 
     Object.defineProperty(this, 'period', {
         get: function(){ return period },
@@ -27,6 +27,6 @@ window.onload = function(){
     var zt = new Zoetrope(),
         gui = new DAT.GUI();
 
-    gui.add(zt, 'period', 0.2, 10, 0.01);
+    gui.add(zt, 'period', 0.01, 10, 0.01);
     gui.add(zt, 'angle', -25, 25);
 };
