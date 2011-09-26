@@ -4,9 +4,10 @@ var Zoetrope = function(){
 
     // Properties with getters and setters:
     var period = 1.200,
-        angle = -3;
+        angle = -3,
+        slitWidth = 'medium';
 
-    Object.defineProperty(this, 'period', {
+    Object.defineProperty(this, 'Period', {
         get: function(){ return period },
         set: function(value){
             period = value;
@@ -14,11 +15,19 @@ var Zoetrope = function(){
         }
     });
 
-    Object.defineProperty(this, 'angle', {
+    Object.defineProperty(this, 'Angle', {
         get: function(){ return angle },
         set: function(value){
             angle = value;
             container.style.webkitTransform = 'rotateX(' + angle + 'deg)';
+        }
+    });
+
+    Object.defineProperty(this, 'Slit Width', {
+        get: function(){ return slitWidth },
+        set: function(value){
+            slitWidth = value;
+            frames.className = frames.className.replace(/small|medium|large/g, '') + slitWidth;
         }
     });
 };
@@ -32,8 +41,9 @@ window.onload = function(){
 
     document.getElementById('options').appendChild(gui.domElement);
 
-    gui.add(zt, 'period', 0.01, 10, 0.01);
-    gui.add(zt, 'angle', -25, 25, 0.1);
+    gui.add(zt, 'Period', 0.01, 10, 0.01);
+    gui.add(zt, 'Angle', -25, 25, 0.1);
+    gui.add(zt, 'Slit Width').options('small', 'medium', 'large');
 
     // Setup the little show hide control button.
     var controls = document.getElementById('controls'),
