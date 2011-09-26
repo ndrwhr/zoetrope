@@ -1,0 +1,60 @@
+
+#controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    border-right: 2px solid #222;
+    border-bottom: 2px solid #222;
+    border-bottom-right-radius: 10px;
+    background: rgba(0, 0, 0, 0.85);
+    font-size: 11px;
+    font-family: lucida, lucida grande;
+    color: white;
+    padding: 10px 15px 10px 20px;
+
+    /* Position in front of the zoetrope */
+    -webkit-transform: translateZ(1500px);
+    z-index: 1000;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.6em;
+    margin-bottom: 0.6em;
+}
+
+h1 a {
+    font-size: 9px;
+}
+
+h2 {
+    font-size: 1.3em;
+    margin-bottom: 0.8em;
+}
+
+p {
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+    color: #eee;
+}
+
+p.social {
+    text-align: center;
+}
+
+a, a:visited {
+    color: #00A9F7;
+    text-decoration: none;
+}
+
+/* Override soem guidat deafults using !important *shudder* */
+.guidat {
+    float: none !important;
+}
+a.guidat-toggle {
+    display: none !important;
+}

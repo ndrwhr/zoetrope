@@ -24,8 +24,12 @@ var Zoetrope = function(){
 };
 
 window.onload = function(){
+    DAT.GUI.autoPlace = false;
+
     var zt = new Zoetrope(),
         gui = new DAT.GUI();
+
+    document.getElementById('options').appendChild(gui.domElement);
 
     gui.add(zt, 'period', 0.01, 10, 0.01);
     gui.add(zt, 'angle', -25, 25, 0.1);
