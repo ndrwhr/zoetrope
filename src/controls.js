@@ -24,6 +24,7 @@ var Zoetrope = function(){
 };
 
 window.onload = function(){
+    // Setup the DAT.GUI interface.
     DAT.GUI.autoPlace = false;
 
     var zt = new Zoetrope(),
@@ -33,4 +34,19 @@ window.onload = function(){
 
     gui.add(zt, 'period', 0.01, 10, 0.01);
     gui.add(zt, 'angle', -25, 25, 0.1);
+
+    // Setup the little show hide control button.
+    var controls = document.getElementById('controls'),
+        button = document.getElementById('controls-toggle');
+
+    button.addEventListener('click', function(event){
+        event.preventDefault();
+
+        var closed = controls.className.match(/closed/),
+            className = closed ? '' : 'closed',
+            text = closed ? 'Hide Controls' : 'Show Controls';
+
+        controls.className = className;
+        button.innerHTML = text;
+    }, false);
 };
