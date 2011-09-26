@@ -1,5 +1,5 @@
 var Zoetrope = function(){
-    var container = document.getElementById('container'),
+    var container = document.querySelector('.container'),
         frames = document.querySelector('.frames');
 
     // Properties with getters and setters:
@@ -28,5 +28,5 @@ window.onload = function(){
         gui = new DAT.GUI();
 
     gui.add(zt, 'period', 0.01, 10, 0.01);
-    gui.add(zt, 'angle', -25, 25);
+    gui.add(zt, 'angle', -25, 25, 0.1);
 };

@@ -1,13 +1,15 @@
 body {
-    background-color: #151515;
+    font-size: 12px;
+    font-family: lucida, lucida grande;
+    background-color: #ddd;
 }
 
 .wrapper, .wrapper * {
-    margin-top: 150px;
+    margin-top: 100px;
     -webkit-transform-style: preserve-3d;
 }
 
-#container {
+.container {
     height: 100px;
     width: 100px;
     margin: 0 auto;
