@@ -1,10 +1,7 @@
 
 var DOM = {
     style: function(element, property, value){
-        var prefixes = Modernizr._prefixes;
-
-        for (var i = 0; i < prefixes.length; i++)
-            element.style[prefixes[i] + property] = value;
+        element.style[Modernizr.prefixed(property)] = value;
     }
 };
 
@@ -31,7 +28,7 @@ var Zoetrope = function(){
         get: function(){ return period },
         set: function(value){
             period = value;
-            DOM.style(frames, 'animation-duration', (period * 1000) + 'ms');
+            DOM.style(frames, 'animationDuration', (period * 1000) + 'ms');
         }
     });
 
