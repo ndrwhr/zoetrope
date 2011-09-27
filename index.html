@@ -24,11 +24,13 @@
 
         <p>An old timey moving picture machine is what it is. You can read more <a href="http://en.wikipedia.org/wiki/Zoetrope" target="blank">here</a>.</p>
 
-        <h2>Options:</h2>
+        <div class="supported-options">
+            <h2>Options:</h2>
 
-        <div id="options"></div>
+            <div id="options"></div>
 
-        <p class="error">* Period control appears to be broken in Safari and Webkit nightlies, <b>but works great in Chrome</b>.</p>
+            <p class="error">* Period control appears to be broken in Safari and Webkit nightlies, <b>but works great in Chrome</b>.</p>
+        </div>
 
         <p class="social">
             <iframe src="http://www.facebook.com/plugins/like.php?href=http://andrew-hoyer.com/experiments/zoetrope/&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
@@ -69,6 +71,13 @@
                 <div></div>
             </div>
         </div>
+    </div>
+
+    <div class="fallback">
+        <h1>Oh no!</h1>
+        <p>Your browser does not support some of the technology required for this experiment. You'll need a relatively modern browser that supports both <b>CSS 3D-Transforms</b> as well as <b>CSS Animations</b>. Maybe try <a href="http://www.google.com/chrome" target="blank">Google Chrome</a> or <a href="http://www.apple.com/safari/" target="blank">Safari</a>, or just watch the video below:</p>
+        <iframe width="480" height="360" src="http://www.youtube.com/embed/z_AbfPXTKms" frameborder="0" allowfullscreen></iframe>
+        <p class="alternate">It may also be that your computer/device does not support hardware acceleration.</p>
     </div>
 
     <script type="text/javascript" src="src/controls.js"></script>

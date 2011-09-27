@@ -99,18 +99,54 @@ body {
     color: #eee;
 }
 
-p.social {
+#controls p.social {
     text-align: center;
 }
 
-p.error {
+#controls p.error {
     color: #E81A4D;
-    line-height: 1em;
 }
+
+
 
 a, a:visited {
     color: #00A9F7;
     text-decoration: none;
+}
+
+.supported-options {
+    display: none;
+}
+
+.cssanimations.csstransforms3d .supported-options {
+    display: block;
+}
+
+.fallback {
+    display: block;
+    margin: 50px 50px 0 350px;
+    font-size: 15px;
+    line-height: 1.5em;
+    width: 500px;
+}
+
+.cssanimations.csstransforms3d .fallback {
+    display: none;
+}
+
+.fallback h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.fallback p {
+    margin-bottom: 1em;
+}
+
+.fallback p.alternate {
+    font-size: 12px;
 }
 
 /* Override some guidat deafults using !important *shudder* */

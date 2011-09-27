@@ -1,9 +1,14 @@
 
 .wrapper {
+    display: none;
     position: absolute;
     top: 35%;
     width: 100%;
     margin-left: 75px;
+}
+
+.cssanimations.csstransforms3d .wrapper {
+    display: block;
 }
 
 .wrapper * {
