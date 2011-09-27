@@ -1,3 +1,13 @@
+
+var DOM = {
+    style: function(element, property, value){
+        var prefixes = Modernizr._prefixes;
+
+        for (var i = 0; i < prefixes.length; i++)
+            element.style[prefixes[i] + property] = value;
+    }
+};
+
 var Zoetrope = function(){
     var wrapper = document.querySelector('.wrapper'),
         container = document.querySelector('.zoetrope'),
@@ -13,7 +23,7 @@ var Zoetrope = function(){
         get: function(){ return scale },
         set: function(value){
             scale = value;
-            wrapper.style.webkitTransform = 'scale(' + scale + ')';
+            DOM.style(wrapper, 'transform', 'scale(' + scale + ')');
         }
     });
 
@@ -21,7 +31,7 @@ var Zoetrope = function(){
         get: function(){ return period },
         set: function(value){
             period = value;
-            frames.style.webkitAnimationDuration = (period * 1000) + 'ms';
+            DOM.style(frames, 'animation-duration', (period * 1000) + 'ms');
         }
     });
 
@@ -29,7 +39,7 @@ var Zoetrope = function(){
         get: function(){ return angle },
         set: function(value){
             angle = value;
-            container.style.webkitTransform = 'rotateX(' + angle + 'deg)';
+            DOM.style(container, 'transform', 'rotateX(' + angle + 'deg)');
         }
     });
 
