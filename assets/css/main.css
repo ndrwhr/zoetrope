@@ -1,3 +1,35 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    line-height: 1;
+    font-size: 11px;
+    font-family: lucida, lucida grande;
+    background-color: #ddd;
+    color: black;
+}
 
 #controls {
     position: absolute;
@@ -8,11 +40,9 @@
     border-bottom: 1px solid #222;
     border-bottom-right-radius: 5px;
     background: rgba(0, 0, 0, 0.85);
-    font-size: 11px;
-    font-family: lucida, lucida grande;
-    color: white;
     padding: 0px 15px 25px 20px;
     overflow: hidden;
+    color: white;
 
     /* Position in front of the zoetrope */
     transform: translateZ(1500px);
@@ -29,13 +59,12 @@
 
 #controls-toggle {
     position: absolute;
-    content: "Hide Controls";
     bottom: 0;
     left: 0;
     right: 0;
     border-top: 1px solid #444;
     border-bottom-right-radius: 4px;
-    padding: 7px;
+    padding: 7px 0;
     text-align: center;
     background: #333;
     color: #ccc;
@@ -45,26 +74,26 @@
     background: #444;
 }
 
-h1, h2 {
+#controls h1, #controls h2 {
     font-weight: bold;
 }
 
-h1 {
+#controls h1 {
     font-size: 1.6em;
     margin-bottom: 0.6em;
     margin-top: 10px;
 }
 
-h1 a {
+#controls h1 a {
     font-size: 9px;
 }
 
-h2 {
+#controls h2 {
     font-size: 1.3em;
     margin-bottom: 0.8em;
 }
 
-p {
+#controls p {
     line-height: 1.5em;
     margin-bottom: 1.5em;
     color: #eee;

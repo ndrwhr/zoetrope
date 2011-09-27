@@ -1,12 +1,3 @@
-body {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #ddd;
-    overflow: hidden;
-}
 
 .wrapper {
     position: absolute;
@@ -55,18 +46,22 @@ body {
     from { transform: rotateY(0); }
     to   { transform: rotateY(-360deg); }
 }
+
 @-webkit-keyframes spin {
     from { -webkit-transform: rotateY(0); }
     to   { -webkit-transform: rotateY(-360deg); }
 }
+
 @-moz-keyframes spin {
     from { -moz-transform: rotateY(0); }
     to   { -moz-transform: rotateY(-360deg); }
 }
+
 @-ie-keyframes spin {
     from { -ie-transform: rotateY(0); }
     to   { -ie-transform: rotateY(-360deg); }
 }
+
 @-o-keyframes spin {
     from { -o-transform: rotateY(0); }
     to   { -o-transform: rotateY(-360deg); }
@@ -103,7 +98,7 @@ body {
     content: "";
     background: black;
     width: 102px;
-    /* HACK getting the :after positioned outside the wheel...*/
+    /* HACK getting the :after positioned outside the wheel... */
     transform: translateZ(1px);
     -webkit-transform: translateZ(1px);
     -moz-transform: translateZ(1px);
@@ -112,10 +107,10 @@ body {
 }
 
 .frames > div:after {
+    content: "";
     top: -98px;
     width: 102px;
     height: 100px;
-    content: "";
     border-left: 35px solid black;
     border-right: 35px solid black;
     border-top: 15px solid black;
