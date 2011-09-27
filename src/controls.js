@@ -14,7 +14,8 @@ var Zoetrope = function(){
     var scale = 1,
         period = 1.200,
         angle = -11,
-        animation = 'willie';
+        animation = 'willie',
+        background = 238;
 
     Object.defineProperty(this, 'Scale', {
         get: function(){ return scale },
@@ -47,6 +48,18 @@ var Zoetrope = function(){
             container.className = container.className.replace(/horse|ball|willie/g, '') + animation;
         }
     });
+
+    Object.defineProperty(this, 'Background', {
+        get: function(){ return background },
+        set: function(value){
+            background = value;
+
+            value = value.toString(16);
+            if (value.length < 2) value = '0' + value;
+
+            DOM.style(document.body, 'backgroundColor', '#' + value + value + value);
+        }
+    });
 };
 
 window.onload = function(){
@@ -66,6 +79,7 @@ window.onload = function(){
     gui.add(zt, 'Rotation Period', 0.01, 5, 0.01);
     gui.add(zt, 'Scale', 0.5, 5, 0.01);
     gui.add(zt, 'Angle', -20, 20, 0.1);
+    gui.add(zt, 'Background', 0, 255, 1);
 
     // Setup the little show hide control button.
     var controls = document.getElementById('controls'),
