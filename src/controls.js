@@ -5,7 +5,7 @@ var Zoetrope = function(){
     // Properties with getters and setters:
     var period = 1.200,
         angle = -3,
-        slitWidth = 'medium';
+        animation = 'willie';
 
     Object.defineProperty(this, 'Period', {
         get: function(){ return period },
@@ -23,11 +23,11 @@ var Zoetrope = function(){
         }
     });
 
-    Object.defineProperty(this, 'Slit Width', {
-        get: function(){ return slitWidth },
+    Object.defineProperty(this, 'Animation', {
+        get: function(){ return animation },
         set: function(value){
-            slitWidth = value;
-            frames.className = frames.className.replace(/small|medium|large/g, '') + slitWidth;
+            animation = value;
+            container.className = container.className.replace(/horse|ball|willie/g, '') + animation;
         }
     });
 };
@@ -43,7 +43,11 @@ window.onload = function(){
 
     gui.add(zt, 'Period', 0.01, 10, 0.01);
     gui.add(zt, 'Angle', -25, 25, 0.1);
-    gui.add(zt, 'Slit Width').options('small', 'medium', 'large');
+    gui.add(zt, 'Animation').options({
+        'Muybridge Horse': 'horse',
+        'Bouncing Ball': 'ball',
+        'Steamboat Willie': 'willie'
+    });
 
     // Setup the little show hide control button.
     var controls = document.getElementById('controls'),

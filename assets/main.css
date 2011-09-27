@@ -36,8 +36,19 @@ body {
 
 .frames > div {
     background-color: white;
-    background-image: url("muybridge.jpg");
     -webkit-backface-visibility: visible;
+}
+
+.container.ball .frames > div  {
+    background-image: url("balls.jpg");
+}
+
+.container.horse .frames > div {
+    background-image: url("muybridge.jpg");
+}
+
+.container.willie .frames > div {
+    background-image: url("willie.jpg");
 }
 
 .frames > div:before {
@@ -53,23 +64,10 @@ body {
     width: 102px;
     height: 100px;
     content: "";
+    border-left: 35px solid black;
+    border-right: 35px solid black;
     border-top: 15px solid black;
     border-bottom: 15px solid black;
     -webkit-box-sizing: border-box;
     -webkit-transform: translateZ(1px);
-}
-
-.frames.small > div:after {
-    border-left: 45px solid black;
-    border-right: 45px solid black;
-}
-
-.frames.medium > div:after {
-    border-left: 35px solid black;
-    border-right: 35px solid black;
-}
-
-.frames.large > div:after {
-    border-left: 25px solid black;
-    border-right: 25px solid black;
 }
