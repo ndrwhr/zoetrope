@@ -17,7 +17,7 @@ var Zoetrope = function(){
         animation = 'willie',
         background = 238;
 
-    Object.defineProperty(this, 'Scale', {
+    Object.defineProperty(this, 'scale', {
         get: function(){ return scale },
         set: function(value){
             scale = value;
@@ -25,7 +25,7 @@ var Zoetrope = function(){
         }
     });
 
-    Object.defineProperty(this, 'Rotation Period', {
+    Object.defineProperty(this, 'period', {
         get: function(){ return period },
         set: function(value){
             period = value;
@@ -33,7 +33,7 @@ var Zoetrope = function(){
         }
     });
 
-    Object.defineProperty(this, 'Angle', {
+    Object.defineProperty(this, 'angle', {
         get: function(){ return angle },
         set: function(value){
             angle = value;
@@ -41,7 +41,7 @@ var Zoetrope = function(){
         }
     });
 
-    Object.defineProperty(this, 'Animation', {
+    Object.defineProperty(this, 'animation', {
         get: function(){ return animation },
         set: function(value){
             animation = value;
@@ -49,7 +49,7 @@ var Zoetrope = function(){
         }
     });
 
-    Object.defineProperty(this, 'Background', {
+    Object.defineProperty(this, 'background', {
         get: function(){ return background },
         set: function(value){
             background = value;
@@ -71,15 +71,15 @@ window.onload = function(){
 
     document.getElementById('options').appendChild(gui.domElement);
 
-    gui.add(zt, 'Animation').options({
+    gui.add(zt, 'animation').options({
         'Muybridge Horse': 'horse',
         'Bouncing Ball': 'ball',
         'Steamboat Willie': 'willie'
-    });
-    gui.add(zt, 'Rotation Period', 0.01, 5, 0.01);
-    gui.add(zt, 'Scale', 0.5, 5, 0.01);
-    gui.add(zt, 'Angle', -20, 20, 0.1);
-    gui.add(zt, 'Background', 0, 255, 1);
+    }).name('Animation');
+    gui.add(zt, 'period', 0.01, 5, 0.01).name('Rotational Period');
+    gui.add(zt, 'scale', 0.5, 5, 0.01).name('Scale');
+    gui.add(zt, 'angle', -20, 20, 0.1).name('Angle');
+    gui.add(zt, 'background', 0, 255, 1).name('Background');
 
     // Setup the little show hide control button.
     var controls = document.getElementById('controls'),
