@@ -40,15 +40,15 @@ body {
 }
 
 .container.ball .frames > div  {
-    background-image: url("balls.jpg");
+    background-image: url("../images/balls.jpg");
 }
 
 .container.horse .frames > div {
-    background-image: url("muybridge.jpg");
+    background-image: url("../images/muybridge.jpg");
 }
 
 .container.willie .frames > div {
-    background-image: url("willie.jpg");
+    background-image: url("../images/willie.jpg");
 }
 
 .frames > div:before {
