@@ -70,6 +70,11 @@ p.social {
     text-align: center;
 }
 
+p.error {
+    color: #E81A4D;
+    line-height: 1em;
+}
+
 a, a:visited {
     color: #00A9F7;
     text-decoration: none;
@@ -78,6 +83,7 @@ a, a:visited {
 /* Override soem guidat deafults using !important *shudder* */
 .guidat {
     float: none !important;
+    margin-bottom: 5px !important;
 }
 a.guidat-toggle {
     display: none !important;
