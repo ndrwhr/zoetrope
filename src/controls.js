@@ -51,14 +51,14 @@ window.onload = function(){
 
     document.getElementById('options').appendChild(gui.domElement);
 
-    gui.add(zt, 'Scale', 0.5, 5, 0.01);
-    gui.add(zt, 'Angle', -20, 20, 0.1);
-    gui.add(zt, 'Rotation Period', 0.01, 5, 0.01);
     gui.add(zt, 'Animation').options({
         'Muybridge Horse': 'horse',
         'Bouncing Ball': 'ball',
         'Steamboat Willie': 'willie'
     });
+    gui.add(zt, 'Rotation Period', 0.01, 5, 0.01);
+    gui.add(zt, 'Scale', 0.5, 5, 0.01);
+    gui.add(zt, 'Angle', -20, 20, 0.1);
 
     // Setup the little show hide control button.
     var controls = document.getElementById('controls'),
