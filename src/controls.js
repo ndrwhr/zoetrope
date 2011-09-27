@@ -1,11 +1,21 @@
 var Zoetrope = function(){
-    var container = document.querySelector('.container'),
+    var wrapper = document.querySelector('.wrapper'),
+        container = document.querySelector('.container'),
         frames = document.querySelector('.frames');
 
     // Properties with getters and setters:
-    var period = 1.200,
+    var scale = 1,
+        period = 1.200,
         angle = -3,
         animation = 'willie';
+
+    Object.defineProperty(this, 'Scale', {
+        get: function(){ return scale },
+        set: function(value){
+            scale = value;
+            wrapper.style.webkitTransform = 'scale(' + scale + ')';
+        }
+    });
 
     Object.defineProperty(this, 'Period', {
         get: function(){ return period },
@@ -41,6 +51,7 @@ window.onload = function(){
 
     document.getElementById('options').appendChild(gui.domElement);
 
+    gui.add(zt, 'Scale', 0.5, 5, 0.01);
     gui.add(zt, 'Period', 0.01, 10, 0.01);
     gui.add(zt, 'Angle', -25, 25, 0.1);
     gui.add(zt, 'Animation').options({
