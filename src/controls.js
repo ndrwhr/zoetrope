@@ -6,7 +6,7 @@ var Zoetrope = function(){
     // Properties with getters and setters:
     var scale = 1,
         period = 1.200,
-        angle = -4,
+        angle = -11,
         animation = 'willie';
 
     Object.defineProperty(this, 'Scale', {
@@ -17,7 +17,7 @@ var Zoetrope = function(){
         }
     });
 
-    Object.defineProperty(this, 'Period', {
+    Object.defineProperty(this, 'Rotation Period', {
         get: function(){ return period },
         set: function(value){
             period = value;
@@ -52,8 +52,8 @@ window.onload = function(){
     document.getElementById('options').appendChild(gui.domElement);
 
     gui.add(zt, 'Scale', 0.5, 5, 0.01);
-    gui.add(zt, 'Period', 0.01, 10, 0.01);
-    gui.add(zt, 'Angle', -25, 25, 0.1);
+    gui.add(zt, 'Angle', -20, 20, 0.1);
+    gui.add(zt, 'Rotation Period', 0.01, 5, 0.01);
     gui.add(zt, 'Animation').options({
         'Muybridge Horse': 'horse',
         'Bouncing Ball': 'ball',
