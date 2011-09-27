@@ -76,7 +76,7 @@ window.onload = function(){
         'Bouncing Ball': 'ball',
         'Steamboat Willie': 'willie'
     }).name('Animation');
-    gui.add(zt, 'period', 0.01, 5, 0.01).name('Rotational Period');
+    gui.add(zt, 'period', 0.01, 5, 0.01).name('Rotational Period*');
     gui.add(zt, 'scale', 0.5, 5, 0.01).name('Scale');
     gui.add(zt, 'angle', -20, 20, 0.1).name('Angle');
     gui.add(zt, 'background', 0, 255, 1).name('Background');
