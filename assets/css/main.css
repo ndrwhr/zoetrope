@@ -7,7 +7,7 @@ body {
     -webkit-transform-style: preserve-3d;
 }
 
-.container {
+.zoetrope {
     height: 100px;
     width: 100px;
     margin: 0 auto;
@@ -39,15 +39,15 @@ body {
     -webkit-backface-visibility: visible;
 }
 
-.container.ball .frames > div  {
+.zoetrope.ball .frames > div  {
     background-image: url("../images/balls.jpg");
 }
 
-.container.horse .frames > div {
+.zoetrope.horse .frames > div {
     background-image: url("../images/muybridge.jpg");
 }
 
-.container.willie .frames > div {
+.zoetrope.willie .frames > div {
     background-image: url("../images/willie.jpg");
 }
 

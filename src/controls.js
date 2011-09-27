@@ -1,6 +1,6 @@
 var Zoetrope = function(){
     var wrapper = document.querySelector('.wrapper'),
-        container = document.querySelector('.container'),
+        container = document.querySelector('.zoetrope'),
         frames = document.querySelector('.frames');
 
     // Properties with getters and setters:
