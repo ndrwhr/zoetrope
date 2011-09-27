@@ -15,7 +15,11 @@
     overflow: hidden;
 
     /* Position in front of the zoetrope */
+    transform: translateZ(1500px);
     -webkit-transform: translateZ(1500px);
+    -moz-transform: translateZ(1500px);
+    -ie-transform: translateZ(1500px);
+    -o-transform: translateZ(1500px);
     z-index: 1000;
 }
 
@@ -80,7 +84,7 @@ a, a:visited {
     text-decoration: none;
 }
 
-/* Override soem guidat deafults using !important *shudder* */
+/* Override some guidat deafults using !important *shudder* */
 .guidat {
     float: none !important;
     margin-bottom: 5px !important;

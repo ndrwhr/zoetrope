@@ -16,15 +16,27 @@ body {
 }
 
 .wrapper * {
+    transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ie-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
 }
 
 .zoetrope {
     height: 100px;
     width: 100px;
     margin: 0 auto;
+    perspective: 900;
     -webkit-perspective: 900;
+    -moz-perspective: 900;
+    -ie-perspective: 900;
+    -o-perspective: 900;
+    transform: rotateX(-11deg);
     -webkit-transform: rotateX(-11deg);
+    -moz-transform: rotateX(-11deg);
+    -ie-transform: rotateX(-11deg);
+    -o-transform: rotateX(-11deg);
 }
 
 .frames {
@@ -32,15 +44,32 @@ body {
     height: 100px;
     width: 100px;
     margin: 0 auto;
-    -webkit-animation-name: spin;
-    -webkit-animation-duration: 1200ms;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
+    animation: spin 1200ms infinite linear;
+    -webkit-animation: spin 1200ms infinite linear;
+    -moz-animation: spin 1200ms infinite linear;
+    -ie-animation: spin 1200ms infinite linear;
+    -o-animation: spin 1200ms infinite linear;
 }
 
+@keyframes spin {
+    from { transform: rotateY(0); }
+    to   { transform: rotateY(-360deg); }
+}
 @-webkit-keyframes spin {
     from { -webkit-transform: rotateY(0); }
     to   { -webkit-transform: rotateY(-360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotateY(0); }
+    to   { -moz-transform: rotateY(-360deg); }
+}
+@-ie-keyframes spin {
+    from { -ie-transform: rotateY(0); }
+    to   { -ie-transform: rotateY(-360deg); }
+}
+@-o-keyframes spin {
+    from { -o-transform: rotateY(0); }
+    to   { -o-transform: rotateY(-360deg); }
 }
 
 .frames > div, .frames > div:after, .frames > div:before {
@@ -51,7 +80,11 @@ body {
 
 .frames > div {
     background-color: white;
+    backface-visibility: visible;
     -webkit-backface-visibility: visible;
+    -moz-backface-visibility: visible;
+    -ie-backface-visibility: visible;
+    -o-backface-visibility: visible;
 }
 
 .zoetrope.ball .frames > div  {
@@ -71,7 +104,11 @@ body {
     background: black;
     width: 102px;
     /* HACK getting the :after positioned outside the wheel...*/
+    transform: translateZ(1px);
     -webkit-transform: translateZ(1px);
+    -moz-transform: translateZ(1px);
+    -ie-transform: translateZ(1px);
+    -o-transform: translateZ(1px);
 }
 
 .frames > div:after {
@@ -83,6 +120,14 @@ body {
     border-right: 35px solid black;
     border-top: 15px solid black;
     border-bottom: 15px solid black;
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ie-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    transform: translateZ(1px);
     -webkit-transform: translateZ(1px);
+    -moz-transform: translateZ(1px);
+    -ie-transform: translateZ(1px);
+    -o-transform: translateZ(1px);
 }
