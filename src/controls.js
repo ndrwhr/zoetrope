@@ -6,7 +6,7 @@ var Zoetrope = function(){
     // Properties with getters and setters:
     var scale = 1,
         period = 1.200,
-        angle = -3,
+        angle = -4,
         animation = 'willie';
 
     Object.defineProperty(this, 'Scale', {

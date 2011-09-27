@@ -12,7 +12,7 @@ body {
     width: 100px;
     margin: 0 auto;
     -webkit-perspective: 900;
-    -webkit-transform: rotateX(-3deg);
+    -webkit-transform: rotateX(-4deg);
 }
 
 .frames {
