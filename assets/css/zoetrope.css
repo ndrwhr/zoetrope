@@ -12,27 +12,29 @@
 }
 
 .wrapper * {
-    transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -ie-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 .zoetrope {
     height: 100px;
     width: 100px;
     margin: 0 auto;
-    perspective: 900;
+
     -webkit-perspective: 900;
     -moz-perspective: 900;
     -ie-perspective: 900;
     -o-perspective: 900;
-    transform: rotateX(-11deg);
+    perspective: 900;
+
     -webkit-transform: rotateX(-11deg);
     -moz-transform: rotateX(-11deg);
     -ie-transform: rotateX(-11deg);
     -o-transform: rotateX(-11deg);
+    transform: rotateX(-11deg);
 }
 
 .frames {
@@ -40,11 +42,15 @@
     height: 100px;
     width: 100px;
     margin: 0 auto;
-    animation: spin 1200ms infinite linear;
-    -webkit-animation: spin 1200ms infinite linear;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 1200ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
     -moz-animation: spin 1200ms infinite linear;
     -ie-animation: spin 1200ms infinite linear;
     -o-animation: spin 1200ms infinite linear;
+    animation: spin 1200ms infinite linear;
 }
 
 @keyframes spin {
@@ -80,11 +86,11 @@
 
 .frames > div {
     background-color: white;
-    backface-visibility: visible;
     -webkit-backface-visibility: visible;
     -moz-backface-visibility: visible;
     -ie-backface-visibility: visible;
     -o-backface-visibility: visible;
+    backface-visibility: visible;
 }
 
 .zoetrope.ball .frames > div  {
@@ -104,11 +110,11 @@
     background: black;
     width: 102px;
     /* HACK getting the :after positioned outside the wheel... */
-    transform: translateZ(1px);
     -webkit-transform: translateZ(1px);
     -moz-transform: translateZ(1px);
     -ie-transform: translateZ(1px);
     -o-transform: translateZ(1px);
+    transform: translateZ(1px);
 }
 
 .frames > div:after {
@@ -120,14 +126,16 @@
     border-right: 35px solid black;
     border-top: 15px solid black;
     border-bottom: 15px solid black;
-    box-sizing: border-box;
+
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ie-box-sizing: border-box;
     -o-box-sizing: border-box;
-    transform: translateZ(1px);
+    box-sizing: border-box;
+
     -webkit-transform: translateZ(1px);
     -moz-transform: translateZ(1px);
     -ie-transform: translateZ(1px);
     -o-transform: translateZ(1px);
+    transform: translateZ(1px);
 }

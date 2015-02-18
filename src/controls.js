@@ -29,7 +29,15 @@ var Zoetrope = function(){
         get: function(){ return period },
         set: function(value){
             period = value;
-            DOM.style(frames, 'animationDuration', (period * 1000) + 'ms');
+
+            // HACK: Chrome doesn't seem to want to update the animation duration. To get around
+            // this we should turn off the animation for a moment, then turn it back on with
+            // duration we would like.
+            DOM.style(frames, 'animation', 'none');
+            setTimeout(function(){
+                DOM.style(frames, 'animation', '');
+                DOM.style(frames, 'animationDuration', (period * 1000) + 'ms');
+            }, 1);
         }
     });
 
@@ -76,7 +84,7 @@ window.onload = function(){
         'Bouncing Ball': 'ball',
         'Steamboat Willie': 'willie'
     }).name('Animation');
-    gui.add(zt, 'period', 0.01, 5, 0.01).name('Rotational Period*');
+    gui.add(zt, 'period', 0.01, 5, 0.01).name('Rotational Period');
     gui.add(zt, 'scale', 0.5, 5, 0.01).name('Scale');
     gui.add(zt, 'angle', -20, 20, 0.1).name('Angle');
     gui.add(zt, 'background', 0, 255, 1).name('Background');
